@@ -202,7 +202,7 @@ You can abort or delete all data and setup everything from scratch. If so, confi
 			/var/lib/grommunio-web/*
 
 		# recreate them..
-		mkdir -p /var/lib/gromox/{domain,user,queue/{cache,mess,save,timer}} \
+		mkdir -p /var/lib/gromox/{domain,user,queue/{cache,mess,save}} \
 			/var/lib/grommunio-web/{session,tmp/session,sqlite-index}
 
 		# set permissions
@@ -1405,7 +1405,6 @@ options:
       - unit: gromox-imap.service
       - unit: gromox-midb.service
       - unit: gromox-pop3.service
-      - unit: gromox-timer.service
       - unit: gromox-zcore.service
       - unit: nginx.service
       - unit: php$PHPVER-fpm.service
